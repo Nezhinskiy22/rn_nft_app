@@ -1,5 +1,6 @@
-import { View, Text, Image } from "react-native";
 import React from "react";
+import { View, Image, Text } from "react-native";
+
 import { SIZES, FONTS, COLORS, SHADOWS, assets } from "../constants";
 
 export const NFTTitle = ({ title, subTitle, titleSize, subTitleSize }) => {
@@ -17,11 +18,11 @@ export const NFTTitle = ({ title, subTitle, titleSize, subTitleSize }) => {
       <Text
         style={{
           fontFamily: FONTS.regular,
-          fontSize: subTitle,
+          fontSize: subTitleSize,
           color: COLORS.primary,
         }}
       >
-        {subTitle}
+        by {subTitle}
       </Text>
     </View>
   );
@@ -48,7 +49,7 @@ export const EthPrice = ({ price }) => {
   );
 };
 
-export const ImageCmp = ({ imgUrl, index }) => {
+const ImageCmp = ({ imgUrl, index }) => {
   return (
     <Image
       source={imgUrl}
@@ -81,6 +82,7 @@ export const EndDate = () => {
         paddingHorizontal: SIZES.font,
         paddingVertical: SIZES.base,
         backgroundColor: COLORS.white,
+        borderRadius: SIZES.font,
         justifyContent: "center",
         alignItems: "center",
         ...SHADOWS.light,

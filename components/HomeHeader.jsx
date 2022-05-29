@@ -1,3 +1,4 @@
+import React from "react";
 import { View, Text, Image, TextInput } from "react-native";
 
 import { COLORS, FONTS, SIZES, assets } from "../constants";
@@ -22,6 +23,7 @@ const HomeHeader = ({ onSearch }) => {
           resizeMode="contain"
           style={{ width: 90, height: 25 }}
         />
+
         <View style={{ width: 45, height: 45 }}>
           <Image
             source={assets.person01}
@@ -41,6 +43,7 @@ const HomeHeader = ({ onSearch }) => {
           />
         </View>
       </View>
+
       <View style={{ marginVertical: SIZES.font }}>
         <Text
           style={{
@@ -49,8 +52,9 @@ const HomeHeader = ({ onSearch }) => {
             color: COLORS.white,
           }}
         >
-          Hello, Victoria 👋
+          Hello Victoria 👋
         </Text>
+
         <Text
           style={{
             fontFamily: FONTS.bold,
@@ -59,9 +63,10 @@ const HomeHeader = ({ onSearch }) => {
             marginTop: SIZES.base / 2,
           }}
         >
-          Let's find a masterpiece
+          Let’s find masterpiece Art
         </Text>
       </View>
+
       <View style={{ marginTop: SIZES.font }}>
         <View
           style={{
